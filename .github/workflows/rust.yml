@@ -41,4 +41,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - run: cargo install cargo-tarpaulin
-      - run: cargo tarpaulin --ignore-tests      
+      - run: cargo tarpaulin --ignore-tests
+
+  cargo-deny:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: EmbarkStudios/cargo-deny-action@v2
+
